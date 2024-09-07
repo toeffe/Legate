@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oversigten</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Port nummer - Info - Handling - Kunde</h1>
+    <div class="container">
+        <!-- Create rows from 1 to 15 -->
+        <script>
+            for (let i = 1; i <= 15; i++) {
+                document.write(`
+                    <div class="row" id="row-${i}">
+                        <span class="number">Port ${i}</span>
+                        <input type="text" placeholder="Info" class="row-input" id="input-${i}">
+                        
+                        <!-- First dropdown menu (same as before) -->
+                        <select class="color-select" onchange="changeColor(${i}, this.value)">
+                            <option value="default"></option>
+                            <option value="unload">Unload</option>
+                            <option value="load">Load</option>
+                            <option value="special">Special</option>
+                        </select>
+
+                        <!-- Second dropdown menu with 8 options -->
+                        <select class="option-select">
+                            <option value="option1"></option>
+                            <option value="option2">ARDO</option>
+                            <option value="option3">TCB</option>
+                            <option value="option4">Flensted</option>
+                            <option value="option5">TF</option>
+                        </select>
+
+                        <button onclick="clearRow(${i})">Clear row</button>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
