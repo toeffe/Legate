@@ -3,12 +3,7 @@ function saveRowData(rowNumber) {
     const inputField = document.getElementById(`input-${rowNumber}`).value;
     const firstDropdown = document.querySelector(`#row-${rowNumber} .color-select`).value;
     const secondDropdown = document.querySelector(`#row-${rowNumber} .option-select`).value;
-    const apiUrl = 'https://legate-fyjof6ymf-tabis-projects-bde69958.vercel.app/'; // Replace with your Vercel URL
-
-    // Save data to localStorage
-    localStorage.setItem(`row-${rowNumber}-input`, inputField);
-    localStorage.setItem(`row-${rowNumber}-color-select`, firstDropdown);
-    localStorage.setItem(`row-${rowNumber}-option-select`, secondDropdown);
+    const apiUrl = "https://script.google.com/macros/s/AKfycbx6eOA7RZDqK7XwxXKVA5jHgUL0W8n1V8z_39hJoi-CAnZQV3jUaPKYz90jc-61XVXB/exec";
 }
 
 // Function to load row data on page load
